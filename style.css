@@ -1,0 +1,113 @@
+
+@font-face {
+    font-family: digital;
+    src: url(./digital-7/digital-7.ttf);
+}
+
+
+
+.clock{
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 200px;
+    font-size: 90px;
+    font-family: digital;
+    position: absolute;
+    text-shadow: 0 0 20px rgb(230, 28, 10),  0 0 20px rgba(10, 175, 230, 0);
+    border: 26px solid #333;
+    transition: all ease 0.3s;
+    letter-spacing: 0.03em; 
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+
+    box-shadow: 3px 5px 30px 0px rgba(55, 255, 0, 0.7); 
+
+    border-image-slice: 1;
+    border-width: 15px;
+    border-image-source:linear-gradient(135deg,#f32170, #743ad5,#eedd44,#cf23cf) ;
+    border-image-outset: 0 0;
+    animation: animate 1.55s linear infinite;    
+}
+
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
+
+
+
+.clock:hover{
+    font-size: 100px;
+    box-shadow: 3px 5px 30px 0px rgba(239, 255, 12, 0.7);
+    border-image-outset: 3 5;
+    width: 50%;
+    height: 30%;
+
+}
+
+
+
+
+html,body {
+    height: 100%;
+}
+
+
+body{
+    background-color: black;
+    background: radial-gradient(ellipse at center,  #343e41  0%, #000000 90%);
+    background-size: 100%;
+    
+}
+
+@media (width <= 750px) {
+
+    .clock{
+       
+        font-size: 50px;
+        width: 400px;
+    height: 80px;
+    
+    
+    }
+
+    .clock:hover{
+        font-size: 60px;
+        box-shadow: 3px 5px 30px 0px rgba(239, 255, 12, 0.7);
+        border-image-outset: 3 5;
+        width: 40%;
+        height: 30%;
+    
+    }
+    
+}
+
+@media (width <= 527px) {
+
+    .clock{
+       
+        font-size: 20px;
+        width: 200px;
+    height: 50px;
+    
+    
+    }
+
+    .clock:hover{
+        font-size: 30px;
+        box-shadow: 3px 5px 30px 0px rgba(239, 255, 12, 0.7);
+        border-image-outset: 3 5;
+        width: 40%;
+        height: 30%;
+    
+    }
+    
+}
